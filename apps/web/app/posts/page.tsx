@@ -35,7 +35,7 @@ export default async function PostsPage() {
           <Link
             href={`/posts/${post.slug}`}
             key={post.url}
-            className="border transition-all hover:scale-105 shadow-sm transform-gpu hover:cursor-pointer rounded-md border-neutral-300 text-sm w-[300px] flex flex-col"
+            className="border transition-all bg-white hover:scale-105 shadow-sm transform-gpu hover:cursor-pointer rounded-md border-neutral-300 text-sm w-[300px] flex flex-col"
           >
             {post.coverImage ? (
               <Image
