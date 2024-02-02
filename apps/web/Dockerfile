@@ -56,7 +56,7 @@ USER nextjs
 
 COPY --from=installer /app/apps/web/next.config.js .
 COPY --from=installer /app/apps/web/package.json .
-COPY --from=installer /app/.env .env
+COPY --from=installer /app/.env .env.local
 
 # Automatically leverage output traces to reduce image size
 # https://nextjs.org/docs/advanced-features/output-file-tracing
