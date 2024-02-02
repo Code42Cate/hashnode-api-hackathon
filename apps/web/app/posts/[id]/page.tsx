@@ -162,7 +162,7 @@ export default async function PostPage({
           </div>
           <CoverSelect
             baseCoverImage={post.coverImage.url}
-            customCoverImage={`https://hashnode-api-hackathon-web.vercel.app/api/cover?slug=${id}&host=${currentPublication.host}`}
+            customCoverImage={`https://hashnode-api-hackathon.sliplane.app/api/cover?slug=${id}&host=${currentPublication.host}`}
           />
           <div className="flex flex-row items-center justify-between mt-2">
             <span className="text-neutral-700 text-sm">
