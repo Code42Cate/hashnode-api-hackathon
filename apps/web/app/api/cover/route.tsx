@@ -1,6 +1,6 @@
 import { getPostBySlug } from "@/api/hashnode";
 import { createRouteHandlerClient } from "@supabase/auth-helpers-nextjs";
-import { ImageResponse } from "@vercel/og";
+import { ImageResponse } from "next/server";
 import { Tables } from "database/types";
 import { cookies } from "next/headers";
 
