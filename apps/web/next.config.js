@@ -7,5 +7,5 @@ module.exports = {
   experimental: {
     serverActions: true,
   },
-  output: "export"
+  output: "standalone"
 };
