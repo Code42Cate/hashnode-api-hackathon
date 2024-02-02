@@ -100,7 +100,7 @@ export default function PublicationSwitcher({
                           "ml-auto h-4 w-4",
                           selectedPublication.value === Publication.value
                             ? "opacity-100"
-                            : "opacity-0"
+                            : "opacity-0",
                         )}
                       />
                     </CommandItem>

@@ -19,15 +19,15 @@ export async function GET(request: Request) {
             return cookieStore.get(name)?.value;
           },
           set(name: string, value: string, options: CookieOptions) {
-            // @ts-expect-error 
+            // @ts-expect-error
             cookieStore.set({ name, value, ...options });
           },
           remove(name: string, options: CookieOptions) {
-            // @ts-expect-error 
+            // @ts-expect-error
             cookieStore.delete({ name, ...options });
           },
         },
-      }
+      },
     );
     const { error } = await supabase.auth.exchangeCodeForSession(code);
     if (!error) {

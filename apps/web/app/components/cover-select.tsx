@@ -24,7 +24,7 @@ export default function CoverSelect({
           width={1600}
           height={840}
           className={cn(
-            "rounded-md w-[800px] h-[420px] object-cover border border-neutral-300 cursor-pointer"
+            "rounded-md w-[800px] h-[420px] object-cover border border-neutral-300 cursor-pointer",
           )}
         />
       ) : (
@@ -35,7 +35,7 @@ export default function CoverSelect({
           onClick={() => setShowBase(!showBase)}
           height={840}
           className={cn(
-            "rounded-md w-[800px] h-[420px] object-cover border border-neutral-300 z-0 cursor-pointer"
+            "rounded-md w-[800px] h-[420px] object-cover border border-neutral-300 z-0 cursor-pointer",
           )}
         />
       )}
@@ -43,7 +43,7 @@ export default function CoverSelect({
       <div
         className={cn(
           "absolute right-4 bottom-4 bg-white shadow-md rounded-md p-4 w-80 text-sm text-neutral-600 transition-opacity duration-300",
-          showTip ? "opacity-100" : "opacity-0"
+          showTip ? "opacity-100" : "opacity-0",
         )}
       >
         <button

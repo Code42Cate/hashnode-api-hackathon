@@ -8,7 +8,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body>{children}</body>
+      <body>
+        <div className="backdrop" />
+        {children}
+      </body>
     </html>
   );
 }

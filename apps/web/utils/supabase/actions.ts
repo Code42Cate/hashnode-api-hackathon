@@ -19,6 +19,6 @@ export function createClient(cookieStore: ReturnType<typeof cookies>) {
           return cookieStore.set({ name, value: "", ...options });
         },
       },
-    }
+    },
   );
 }

@@ -133,7 +133,7 @@ export default async function PostPage({
   const post = await getPost(
     currentPublication.host,
     currentPublication.api_key,
-    id
+    id,
   );
 
   const { data: postMetadata } = await supabase

@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 async function signInWithGithub() {
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
   );
 
   const { data, error } = await supabase.auth.signInWithOAuth({
@@ -20,8 +20,6 @@ async function signInWithGithub() {
 export default function Page() {
   return (
     <div>
-      <div className="backdrop" />
-
       <div className="flex flex-col w-screen p-4 gap-y-10 h-screen">
         <header className="flex flex-row justify-between w-full">
           <span className="font-mono font-semibold">HIP</span>

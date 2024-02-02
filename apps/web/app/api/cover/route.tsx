@@ -24,7 +24,7 @@ export async function GET(request: Request) {
     { cookies: () => cookieStore },
     {
       supabaseKey: process.env.SUPABASE_KEY,
-    }
+    },
   );
 
   const { data: publication } = await supabase
@@ -119,7 +119,7 @@ export async function GET(request: Request) {
         headers: {
           "content-type": "image/png",
         },
-      }
+      },
     );
   } catch (e: any) {
     console.log(`${e.message}`);
