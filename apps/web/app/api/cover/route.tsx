@@ -7,8 +7,6 @@ import { cookies } from "next/headers";
 const WIDTH = 2400;
 const HEIGHT = 1260;
 
-export const runtime = "edge";
-
 export async function GET(request: Request) {
   const url = new URL(request.url);
   const host = url.searchParams.get("host");
