@@ -11,9 +11,11 @@ export function createClient(cookieStore: ReturnType<typeof cookies>) {
           return cookieStore.get(name)?.value;
         },
         set(name: string, value: string, options: CookieOptions) {
+          // @ts-expect-error
           return cookieStore.set({ name, value, ...options });
         },
         remove(name: string, options: CookieOptions) {
+          // @ts-expect-error
           return cookieStore.set({ name, value: "", ...options });
         },
       },

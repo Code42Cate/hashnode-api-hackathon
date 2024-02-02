@@ -63,6 +63,7 @@ export async function GET(request: Request) {
           >
             {post.comments.slice(0, 5).map((comment, index) => (
               <div
+                key={comment.content + index}
                 style={{
                   padding: "1rem",
                   background: "rgba(255, 255, 255)",
