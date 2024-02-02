@@ -41,6 +41,7 @@ export async function GET(request: Request) {
       (
         <>
           <img
+            alt="Cover Image"
             src={post.coverImage.url}
             width={WIDTH}
             height={HEIGHT}
@@ -86,6 +87,7 @@ export async function GET(request: Request) {
                   }}
                 >
                   <img
+                    alt="Profile Picture"
                     src={comment.profilePicture}
                     width={48}
                     height={48}
