@@ -1,5 +1,6 @@
 import "@ui/styles/globals.css";
 import { GeistSans } from "geist/font/sans";
+import PlausibleProvider from "next-plausible";
 
 export default function RootLayout({
   children,
@@ -8,10 +9,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body>
-        <div className="backdrop" />
-        {children}
-      </body>
+      <PlausibleProvider domain="hashnode-api-hackathon.onrender.com">
+        <body>
+          <div className="backdrop" />
+          {children}
+        </body>
+      </PlausibleProvider>
     </html>
   );
 }

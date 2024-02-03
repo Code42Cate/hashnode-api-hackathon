@@ -39,9 +39,7 @@ export default function Page() {
             Hashnode API Hackathon.
           </p>
 
-          <Button onClick={signInWithGithub}>
-            Login with Github
-          </Button>
+          <Button onClick={signInWithGithub}>Login with Github</Button>
         </div>
 
         <Image
