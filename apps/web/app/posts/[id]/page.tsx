@@ -161,7 +161,13 @@ export default async function PostPage({
             </div>
           </div>
           <CoverSelect
-            baseCoverImage={post.coverImage.url}
+            baseCoverImage={
+              post.coverImage.url.includes(
+                "hashnode-api-hackathon.onrender.com",
+              )
+                ? `https://hashnode-api-hackathon.onrender.com/api/cover?slug=${id}&host=${currentPublication.host}`
+                : post.coverImage.url
+            }
             customCoverImage={`https://hashnode-api-hackathon.onrender.com/api/cover?slug=${id}&host=${currentPublication.host}`}
           />
           <div className="flex flex-row items-center justify-between mt-2">

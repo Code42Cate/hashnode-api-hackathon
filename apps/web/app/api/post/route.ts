@@ -33,7 +33,7 @@ export async function POST(request: Request) {
   const post = await getPostBySlug(
     publication.data.host,
     body.slug,
-    publication.data.api_key
+    publication.data.api_key,
   );
 
   const res = await supabase.from("posts").upsert({
@@ -50,7 +50,7 @@ export async function POST(request: Request) {
       .from("original-covers")
       .upload(
         `${body.id}.png`,
-        await fetch(post.coverImage.url).then((res) => res.blob())
+        await fetch(post.coverImage.url).then((res) => res.blob()),
       );
 
     if (error) {
@@ -68,7 +68,7 @@ export async function POST(request: Request) {
     await updatePost(
       body.id,
       `https://puegijxqyzuokuoeclrk.supabase.co/storage/v1/object/public/original-covers/${post.id}.png`,
-      publication.data.api_key
+      publication.data.api_key,
     );
   }
 
