@@ -18,7 +18,7 @@ type Post = {
 export async function getPostBySlug(
   publication: string,
   slug: string,
-  apiKey: string,
+  apiKey: string
 ) {
   const client = new ApolloClient({
     uri: "https://gql.hashnode.com/",
@@ -164,9 +164,6 @@ async function updatePost(id: string, url: string, apiKey: string) {
       `,
       variables: { input },
     });
-
-    // Access the result as needed
-    console.log(result.data);
   } catch (error) {
     // Handle errors
     console.error(error);
