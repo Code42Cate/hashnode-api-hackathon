@@ -1,6 +1,7 @@
 "use client";
 import { createBrowserClient } from "@supabase/ssr";
 import { Button } from "@ui/components/ui/button";
+import Image from "next/image";
 import { useRouter } from "next/router";
 
 async function signInWithGithub() {
@@ -42,13 +43,13 @@ export default function Page() {
           </Button>
         </div>
 
-        <div className="mx-auto rounded-xl bg-white shadow-lg max-w-[769px] max-h-[500px] w-full h-full">
-          <iframe
-            title="vimeo-player"
-            src="https://player.vimeo.com/video/881604037?h=4ffbe61be6"
-            className="max-w-[769px] max-h-[500px] rounded-xl w-full h-full"
-          />
-        </div>
+        <Image
+          width={1600}
+          height={840}
+          alt="examples"
+          src="https://hashnode-api-hackathon.onrender.com/api/cover?slug=dont-build-docker-apps-without-this-flag&host=code42cate.hashnode.dev"
+          className="mx-auto shadow-xl object-cover rounded-xl w-[800px] h-[420px] border border-gray-300"
+        />
       </div>
     </div>
   );

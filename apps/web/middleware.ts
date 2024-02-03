@@ -8,10 +8,14 @@ export async function middleware(req: NextRequest) {
   const res = NextResponse.next();
 
   // Create a Supabase client configured to use cookies
-  const supabase = createMiddlewareClient<Database>({ req, res }, {
-    supabaseUrl:  'https://puegijxqyzuokuoeclrk.supabase.co',
-    supabaseKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB1ZWdpanhxeXp1b2t1b2VjbHJrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDYzNzgzNTYsImV4cCI6MjAyMTk1NDM1Nn0.CyVkZfiEeTlEqiDHCYX9ewNJ4Sn5D6sGkjviCde68Gc',
-  });
+  const supabase = createMiddlewareClient<Database>(
+    { req, res },
+    {
+      supabaseUrl: "https://puegijxqyzuokuoeclrk.supabase.co",
+      supabaseKey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB1ZWdpanhxeXp1b2t1b2VjbHJrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDYzNzgzNTYsImV4cCI6MjAyMTk1NDM1Nn0.CyVkZfiEeTlEqiDHCYX9ewNJ4Sn5D6sGkjviCde68Gc",
+    },
+  );
 
   // Refresh session if expired - required for Server Components
   await supabase.auth.getSession();

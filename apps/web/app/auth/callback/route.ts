@@ -31,7 +31,9 @@ export async function GET(request: Request) {
     );
     const { error } = await supabase.auth.exchangeCodeForSession(code);
     if (!error) {
-      return NextResponse.redirect(`https://hashnode-api-hackathon.onrender.com/posts`);
+      return NextResponse.redirect(
+        `https://hashnode-api-hackathon.onrender.com/posts`,
+      );
     }
   }
 
