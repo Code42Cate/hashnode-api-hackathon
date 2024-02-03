@@ -7,8 +7,10 @@ import { getPosts } from "@/api/hashnode";
 
 export async function POST(request: Request) {
   const formData = await request.formData();
+
   const host = String(formData.get("host"));
   const apiKey = String(formData.get("api_key"));
+  
   const cookieStore = cookies();
   const supabase = createRouteHandlerClient<Database>({
     cookies: () => cookieStore,

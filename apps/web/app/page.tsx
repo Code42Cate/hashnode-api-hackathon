@@ -31,11 +31,11 @@ export default function Page() {
 
         <div className="mx-auto text-center flex flex-col gap-4 items-center">
           <h1 className="font-mono text-5xl font-semibold">
-            Interactive Hashnode Posts
+            Interactive Hashnode Cover Images
           </h1>
 
           <p className="text-gray-600">
-            Engage your audience with interactive content. Each comment yeets
+            Engage your audience with interactive cover images, built for the Hashnode API Hackathon.
           </p>
 
           <Button onClick={signInWithGithub} className="bg-orange-400 w-fit">
