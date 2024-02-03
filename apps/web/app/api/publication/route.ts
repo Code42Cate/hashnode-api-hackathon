@@ -10,7 +10,7 @@ export async function POST(request: Request) {
 
   const host = String(formData.get("host"));
   const apiKey = String(formData.get("api_key"));
-  
+
   const cookieStore = cookies();
   const supabase = createRouteHandlerClient<Database>({
     cookies: () => cookieStore,

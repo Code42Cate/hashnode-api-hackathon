@@ -35,7 +35,8 @@ export default function Page() {
           </h1>
 
           <p className="text-gray-600">
-            Engage your audience with interactive cover images, built for the Hashnode API Hackathon.
+            Engage your audience with interactive cover images, built for the
+            Hashnode API Hackathon.
           </p>
 
           <Button onClick={signInWithGithub} className="bg-orange-400 w-fit">

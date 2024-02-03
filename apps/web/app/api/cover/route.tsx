@@ -42,7 +42,7 @@ export async function GET(request: Request) {
         <>
           <img
             alt="Cover Image"
-            src={post.coverImage.url}
+            src={`https://puegijxqyzuokuoeclrk.supabase.co/storage/v1/object/public/original-covers/${post.id}.png`}
             width={WIDTH}
             height={HEIGHT}
             style={{

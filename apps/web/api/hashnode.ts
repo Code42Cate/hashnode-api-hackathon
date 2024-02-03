@@ -1,6 +1,7 @@
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
 type Post = {
+  id: string;
   title: string;
   slug: string;
   url?: string;
@@ -18,7 +19,7 @@ type Post = {
 export async function getPostBySlug(
   publication: string,
   slug: string,
-  apiKey: string
+  apiKey: string,
 ) {
   const client = new ApolloClient({
     uri: "https://gql.hashnode.com/",
@@ -36,6 +37,7 @@ export async function getPostBySlug(
           title
           post(slug: "${slug}") {
             title
+            id
             coverImage {
               url
             }
@@ -77,6 +79,7 @@ export async function getPostBySlug(
     coverImage: data.publication.post.coverImage,
     comments,
     slug,
+    id: data.publication.post.id,
     url: data.publication.post.url,
   };
 
