@@ -165,7 +165,7 @@ export default async function PostPage({
               post.coverImage.url.includes(
                 "hashnode-api-hackathon.onrender.com",
               )
-                ? `https://hashnode-api-hackathon.onrender.com/api/cover?slug=${id}&host=${currentPublication.host}`
+                ? `https://puegijxqyzuokuoeclrk.supabase.co/storage/v1/object/public/original-covers/${post.id}.png`
                 : post.coverImage.url
             }
             customCoverImage={`https://hashnode-api-hackathon.onrender.com/api/cover?slug=${id}&host=${currentPublication.host}`}
