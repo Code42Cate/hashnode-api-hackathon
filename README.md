@@ -1,3 +1,2 @@
-# Turborepo starter with shadcn/ui#
+# Hashnode API Hackathon
 
-supabase gen types typescript --project-id puegijxqyzuokuoeclrk --schema public > packages/database/types.ts
