@@ -18,7 +18,7 @@ type Post = {
 export async function getPostBySlug(
   publication: string,
   slug: string,
-  apiKey: string,
+  apiKey: string
 ) {
   const client = new ApolloClient({
     uri: "https://gql.hashnode.com/",
@@ -132,7 +132,7 @@ interface UpdatePostInput {
   };
 }
 
-async function updatePost(id: string, url: string, apiKey: string) {
+export async function updatePost(id: string, url: string, apiKey: string) {
   const client = new ApolloClient({
     uri: "https://gql.hashnode.com/",
     cache: new InMemoryCache(),
@@ -142,10 +142,9 @@ async function updatePost(id: string, url: string, apiKey: string) {
   });
 
   const input: UpdatePostInput = {
-    id: "65a979c3a5002c06e45ccf29",
+    id,
     coverImageOptions: {
-      coverImageURL:
-        "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fdrih4qg6i5h86nv7t4o8.png",
+      coverImageURL: url,
     },
   };
 
