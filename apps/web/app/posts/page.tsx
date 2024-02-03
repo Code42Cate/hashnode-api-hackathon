@@ -39,7 +39,7 @@ export default async function PostsPage() {
           >
             {post.coverImage ? (
               <Image
-                alt=""
+                alt={post.title}
                 src={post.coverImage.url}
                 width={300}
                 height={140}
