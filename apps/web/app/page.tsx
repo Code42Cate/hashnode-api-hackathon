@@ -48,7 +48,7 @@ export default function Page() {
           width={1600}
           height={840}
           alt="examples"
-          src="https://hashnode-api-hackathon.onrender.com/api/cover?slug=dont-build-docker-apps-without-this-flag&host=code42cate.hashnode.dev"
+          src="https://hashnode-api-hackathon.onrender.com/api/cover?slug=what-makes-an-engaging-post&host=code42cate.hashnode.dev"
           className="mx-auto shadow-xl object-cover rounded-xl w-[800px] h-[420px] border border-gray-300"
         />
       </div>
