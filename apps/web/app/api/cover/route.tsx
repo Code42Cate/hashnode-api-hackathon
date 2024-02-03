@@ -36,13 +36,18 @@ export async function GET(request: Request) {
 
   const post = await getPostBySlug(host, slug, publication.api_key);
 
+  let baseImage = `https://puegijxqyzuokuoeclrk.supabase.co/storage/v1/object/public/original-covers/${post.id}.png`
+  if (!post.coverImage.url.includes("hashnode-api-hackathon.onrender.com")) {
+    baseImage = post.coverImage.url
+  }
+
   try {
     return new ImageResponse(
       (
         <>
           <img
             alt="Cover Image"
-            src={`https://puegijxqyzuokuoeclrk.supabase.co/storage/v1/object/public/original-covers/${post.id}.png`}
+            src={baseImage}
             width={WIDTH}
             height={HEIGHT}
             style={{
